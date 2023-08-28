@@ -21,7 +21,7 @@ public class Q1 {
             }
         }
 
-
+        // 두 배열을 오름차순으로 정렬
         Arrays.sort(width);
         Arrays.sort(height);
 
