@@ -2,22 +2,22 @@ package exhaustiveSearch;
 
 public class Q5 {
     public static boolean[] flag;
+    static int answer = 0;
 
     public int solution(int k, int[][] dungeons) {
 
         // 던전의 탐험 여부 기록
         flag = new boolean[dungeons.length];
 
-        int answer = 0;
         int cnt = 0;
 
-        cnt = dfs(k, dungeons, cnt);
+        dfs(k, dungeons, cnt);
 
-        return Math.max(answer, cnt);
+        return answer;
 
     }
 
-    public int dfs(int k, int[][] dungeons, int cnt) {
+    public void dfs(int k, int[][] dungeons, int cnt) {
 
         // dungeon 배열의 길이만큼 순회
         for (int i = 0; i < dungeons.length; i++) {
@@ -37,7 +37,9 @@ public class Q5 {
                 flag[i] = false;
             }
         }
-        return cnt;
+
+        // 가장 많은 던전을 탐험했을 때로 갱신
+        answer = Math.max(answer, cnt);
     }
 
     public static void main(String[] args) {
