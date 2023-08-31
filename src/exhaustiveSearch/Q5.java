@@ -24,7 +24,8 @@ public class Q5 {
 
             // 아직 방문하지 않은 던전 && 최소 필요 피로도를 현재 충족
             if (!flag[i] && dungeons[i][0] <= k) {
-
+                
+                // 방문으로 표시
                 flag[i] = true;
 
                 // 피로도를 재설정, 방문 + 1하고 다른 던전 순회
@@ -34,6 +35,7 @@ public class Q5 {
                 // 던전1 탐험이 된 상황, 밖의 i = 0, 호출된 함수의 i = 2 로 던전3 탐험하고 던전2 탐험
                 dfs(k - dungeons[i][1], dungeons, cnt + 1);
 
+                // 방문하지 않음으로 다시 변경
                 flag[i] = false;
             }
         }
