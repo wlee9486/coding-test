@@ -87,7 +87,8 @@ public class Q6 {
     public static void main(String[] args) {
         Q6 q6 = new Q6();
 
-        System.out.println(q6.solution(9, new int[][]{{1, 3}, {2, 3}, {3, 4}, {4, 5}, {4, 6}, {4, 7}, {7, 8}, {7, 9}}));
+
+       // System.out.println(q6.solution(9, new int[][]{{1, 3}, {2, 3}, {3, 4}, {4, 5}, {4, 6}, {4, 7}, {7, 8}, {7, 9}}));
         System.out.println(q6.solution(4, new int[][]{{1, 2}, {2, 3}, {3, 4}}));
         System.out.println(q6.solution(7, new int[][]{{1, 2}, {2, 7}, {3, 7}, {3, 4}, {4, 5}, {6, 7}}));
 

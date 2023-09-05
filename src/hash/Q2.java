@@ -18,11 +18,14 @@ public class Q2 {
             hmap.put(completion[i], hmap.get(completion[i]) - 1);
         }
 
+        // 모든 key를 순회하면서 value가 0이 아닌 key를 찾음
         for (String s : hmap.keySet()) {
             if (hmap.get(s) != 0) {
                 return s;
             }
         }
+
+
 
 
         return "";
